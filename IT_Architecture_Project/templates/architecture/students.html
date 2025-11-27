@@ -1,0 +1,7 @@
+<h2>Student List</h2>
+
+{% for s in students %}
+    <p>{{ s.forename }} {{ s.surname }} - average: {{ s.avg_score|default:"0" }} - major: {{ s.major }}</p>
+{% empty %}
+    <p>No students yet</p>
+{% endfor %}

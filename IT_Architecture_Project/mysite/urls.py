@@ -19,6 +19,8 @@ from django.urls import path, include
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    path("", RedirectView.as_view(url="vehicles/")),
+    path("", RedirectView.as_view(url="architecture/")),
+    path("architecture/", include("architecture.urls")),
     path("admin/", admin.site.urls),
+    path("accounts/", include("django.contrib.auth.urls")),
 ]
