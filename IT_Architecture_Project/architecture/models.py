@@ -4,6 +4,7 @@ class Student(models.Model):
     forename = models.CharField(max_length=100)
     surname = models.CharField(max_length=100)
     major = models.CharField(max_length=100)
+    average = models.CharField(max_length=100)
     
     def __str__(self):
         return f"{self.forename} {self.surname} {self.major}"

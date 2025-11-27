@@ -1,7 +1,57 @@
-<h2>Student List</h2>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University AnalyticsDashboard</title>
+
+<style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f2f2f2;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px
+        }
+        .user-info a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .user-info a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h2>University Analytics Dashboard</h2>
+    </div>
+    <div class="page">
+        <h3><a href="{% url 'dashboard' %}">Your Dashboard</a></h3>
+    </div>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+           <span>Welcome, {{user.username }}!</span>
+           <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %} 
+    </div>
+</header>
 
 {% for s in students %}
-    <p>{{ s.forename }} {{ s.surname }} - average: {{ s.avg_score|default:"0" }} - major: {{ s.major }}</p>
+    <p>{{ s.forename }} {{ s.surname }} - average: {{ s.average|default:"0" }} - major: {{ s.major }}</p>
 {% empty %}
     <p>No students yet</p>
 {% endfor %}
+</html>

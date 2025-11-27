@@ -1,19 +1,58 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University AnalyticsDashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f2f2f2;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px
+        }
+        .user-info a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .user-info a:hover {
+            background-color: #ddd;
+        }
+    </style>
 </head>
 <body>
+<header>
+    <div class="logo">
+        <h2>Welcome to the analytics dashboard</h2>
+    </div>
+    <div class="page">
+        <h3><a href="{% url 'students' %}">Your Students</a></h3>
+    </div>
+    <div class="user-info">
+        {% if user.is_authenticated %}
+           <span>Welcome, {{user.username }}!</span>
+           <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %} 
+    </div>
+</header>
     <h2>Average Attendance by Course</h2>
+    <img src="{% static 'attendancegraph.png' %}" alt="Attendance graph" height="400" width="700">
     <canvas id="attendanceChart"></canvas>
     <h2>Average Grades by Course</h2>
+    <img src="{% static 'gradegraph.png' %}" alt="Grades graph" height="400" width="400">
     <canvas id="gradesChart"></canvas>
-
-
-    <h3><a href="{% url 'students' %}">Student list</a></h3>
 </body>
 
     </html>
