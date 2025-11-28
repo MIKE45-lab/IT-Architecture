@@ -1,11 +1,11 @@
 # IT-Architecture
 
-Project Part 3
+Project Part 3 (404 Architects)
 
 ## Team Members
 
-Joshua Farrell -- 23313143
-Michael Humphrey -- 23531373
+Joshua Farrell -- 23313143<br>
+Michael Humphrey -- 23531373<br>
 Surya Sathyarajan -- 23304973
 
 ## Project Management
@@ -16,7 +16,7 @@ Surya Sathyarajan -- 23304973
 
 <https://github.com/MIKE45-lab/IT-Architecture>
 
-## Architecture Diagrams
+## Architecture Diagrams & Presentation
 
 Available [here](https://drive.google.com/drive/folders/1RsTI3yC1LGTzIGik1d7w_kymjlguAueh?usp=sharing)
 
@@ -31,6 +31,8 @@ python3 manage.py runserver
 ```
 
 ## Video Link
+
+P.S. "Access Denied" appeared on the folder to submit the video.
 
 ## Workload Breakdown
 
