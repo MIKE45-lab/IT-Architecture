@@ -34,6 +34,8 @@ python3 manage.py runserver
 
 P.S. "Access Denied" appeared on the folder to submit the video.
 
+<https://drive.google.com/file/d/1EsIAqePmLvU-oKlZfghWA_MaZ_-w3mQI/view?usp=sharing>
+
 ## Workload Breakdown
 
 ### Joshua Farrell
