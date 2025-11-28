@@ -16,6 +16,10 @@ Surya Sathyarajan -- 23304973
 
 <https://github.com/MIKE45-lab/IT-Architecture>
 
+## Architecture Diagrams
+
+Available [here](https://drive.google.com/drive/folders/1RsTI3yC1LGTzIGik1d7w_kymjlguAueh?usp=sharing)
+
 ## Website Link
 
 <http://127.0.0.1:8000/>
